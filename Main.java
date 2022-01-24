@@ -1,4 +1,3 @@
-// Method-1: using Brute Force.
 public class Solution {
     Hashtable<Integer, Integer> ht = new Hashtable<>();
     int a = 999999;
@@ -16,17 +15,3 @@ public class Solution {
     }
 }
 
-// Method-2: using HashMap.
-class Solution {
-    public int numIdenticalPairs(int[] numList) {
-        HashMap<Integer, Integer> hm = new HashMap<>();
-        int ans=0;
-        for(int num:numList){
-           int sameNumCount = hm.getOrDefault(num, 0);
-            int numCount = sameNumCount + 1;
-            ans += sameNumCount;
-            hm.put(num, numCount);
-        }
-        return ans;
-    }
-}
